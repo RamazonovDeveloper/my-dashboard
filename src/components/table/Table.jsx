@@ -4,16 +4,10 @@ import './table.css'
 
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
-// import { usersData } from '../../data'
-
 import Modal from '../modal/Modal'
 
 export default function Table(props) {
-
-  
-
-  // localStorage.setItem('users',JSON.stringify(usersData))
-
+  // you can see main code here
   let [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')))
 
   const delBtn = (id) => {

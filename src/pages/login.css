@@ -1,0 +1,21 @@
+.my-form{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 500px;
+    height: fit-content;
+    padding: 20px 40px;
+}
+
+.my-form h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.my-form-item input{
+    margin-bottom: 15px;
+}
+
+.big{
+    height: 100vh;
+}

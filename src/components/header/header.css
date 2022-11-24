@@ -1,0 +1,6 @@
+.head{
+    padding: 2px 20px;
+    border-left: 1px solid var(--my-grey);
+    /* border-bottom: 1px solid rgb(71, 70, 70); */
+    font-size: 1.2rem;
+}

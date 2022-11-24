@@ -1,0 +1,31 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.nav a:hover{
+    border-radius: 0px 20px 20px 0;
+    background-color: var(--my-blue);
+    color: white;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--my-grey);
+}
+
+.logo:hover{
+    cursor: pointer!important;
+    background-color: transparent!important;
+    color: black!important;
+    border-radius: 0!important;
+}

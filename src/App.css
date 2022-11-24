@@ -1,0 +1,16 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.main-part{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--my-grey);
+    overflow-y: scroll;
+}
+
+.App{
+    overflow: hidden;
+}

@@ -10,6 +10,7 @@ body {
 :root{
   --my-grey:rgb(235, 230, 230);
   --my-blue:rgb(90, 90, 239);
+  --my-white: rgb(255, 255, 255);
 }
 
 code {

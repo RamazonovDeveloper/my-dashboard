@@ -33,7 +33,7 @@ function App() {
               <Header setModal={setModal}/>
               <div className='main-part'>
                 <Routes>
-                  <Route path='/tables' element={<Table isModalOpen={modal} closeModal={setModal}/>}/>
+                  <Route path='/*' element={<Table isModalOpen={modal} closeModal={setModal}/>}/>
                   <Route path='/about' element={<>This is about comp</>}/>
                   <Route path='/company' element={<>Company information here</>}/>
                 </Routes>

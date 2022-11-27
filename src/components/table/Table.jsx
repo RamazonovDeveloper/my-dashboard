@@ -5,10 +5,13 @@ import './table.css'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 import Modal from '../modal/Modal'
+import EditModal from '../modal/EditModal'
 
 export default function Table(props) {
   // you can see main code here
   let [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')))
+
+  let [editMod, setEditMod] = useState('')
 
   const delBtn = (id) => {
     users = users.filter( (el) => el.id != id)
@@ -31,6 +34,11 @@ export default function Table(props) {
         {
           props.isModalOpen ? <Modal users={users} setUsers={setUsers} closeModal={props.closeModal}/> : ''
         }
+
+        {
+          editMod ? <EditModal closeEditMod={setEditMod} users={users} setUsers={setUsers} userId={editMod}/> : ''
+        }
+
         <div className='data-box'>
           <table className='data-table'>
             <tr>
@@ -50,8 +58,8 @@ export default function Table(props) {
                   <td>{elem.date}</td>
                   <td>{elem.email}</td>
                   <td>{elem.status ? <span style={{color:"green"}}>Success</span> : <span style={{color:"red"}}>Cancel</span>}</td>
-                  <td><button className='btn btn-primary'><AiFillEdit/></button><button className='btn btn-danger ms-2' onClick={() => delBtn(elem.id)}><AiFillDelete/></button></td>
-                </tr>
+                  <td><button onClick={() => setEditMod(elem.id)} className='btn btn-primary'><AiFillEdit/></button><button className='btn btn-danger ms-2' onClick={() => delBtn(elem.id)}><AiFillDelete/></button></td>
+                </tr> 
             })
           }
 

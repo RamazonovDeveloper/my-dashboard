@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Registration(props) {
 
@@ -36,8 +37,9 @@ export default function Registration(props) {
         <form className='my-form-item' onSubmit={registerUser}>
           <input className='form-control' type="text" placeholder='Username...' onChange={(e) => setUserName(e.target.value)}/>
           <input className='form-control' type="password" placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/>
-          <div className='d-flex justify-content-between'>
+          <div className='d-flex justify-content-between align-items-center'>
             <button className='btn btn-primary'>Save</button>
+            <Link to={'login'}>I have already account</Link>
           </div>
         </form>
       </div>
